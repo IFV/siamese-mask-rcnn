@@ -535,7 +535,7 @@ def evaluate_dataset(model, dataset, dataset_object, eval_type="bbox", dataset_t
             # Run detection
             t = time.time()
             try:
-                r = model.detect([target], [image], verbose=0, random_detections=random_detections)[0]
+                r = model.detect(targets=[target], images=[image], verbose=0, random_detections=random_detections)[0]
             except:
                 print('error running detection for category', category)
                 continue
