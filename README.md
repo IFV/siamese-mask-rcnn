@@ -1,6 +1,8 @@
 # Siamese Mask R-CNN
 
-This is the official implementation of Siamese Mask R-CNN from [One-Shot Instance Segmentation](https://arxiv.org/abs/1811.11507). It is based on the [Mask R-CNN](https://arxiv.org/abs/1703.06870) implementation by [Matterport](https://github.com/matterport/Mask_RCNN).
+This is a fork of the official implementation of Siamese Mask R-CNN from [One-Shot Instance Segmentation](https://arxiv.org/abs/1811.11507). It is based on the [Mask R-CNN](https://arxiv.org/abs/1703.06870) implementation by [Matterport](https://github.com/matterport/Mask_RCNN).
+
+This fork contains extra code for evaluating Siamese Mask R-CNN within the scope of Package Buddy, an autonomous intelligent robotic delivery system.  Package Buddy is currently under development by a project team at New York University.  Siamese Mask R-CNN is implemented on Package Buddy to aid in object detection and avoidance.  This work contributes to [Matthew Avallone](https://github.com/mattavallone)'s MS Thesis, "Package Buddy: Few-Shot Object Detection for a Mobile Robotic System".  For further information about the project, please visit [here](https://github.com/mattavallone/packagebuddy).  The query set for test images used in Package Buddy evaluation can be found [here](https://drive.google.com/open?id=1bcwJxa3VePWThfVx3oMp108eI4EDoRKt) through Google Drive.  To use pycocotools with this new dataset, rename the dataset and [annotation file](https://github.com/mattavallone/siamese-mask-rcnn/blob/master/data/packagebuddy_queryset.json) following MS COCO conventions for either a training or validation set (e.g. "val2014").  Evaluation was done through Google Colab with a GPU machine.
 
 <p align="center">
  <img src="figures/teaser_web.jpg" width=80%>
@@ -16,7 +18,7 @@ The repository includes:
 - [x] Pre-trained weights for all models from the paper
 - [x] Code to evaluate all models from the paper
 - [x] Code to generate result figures
-
+- [x] NEW: Code for Package Buddy evaluation
 ## One-Shot Instance Segmentation
 
 One-shot instance segmentation can be summed up as: Given a query image and a reference image showing an object of a novel category, we seek to detect and segment all instances of the corresponding category (in the image above ‘person’ on the left, ‘car’ on the right). Note that no ground truth annotations of reference categories are used during training.
